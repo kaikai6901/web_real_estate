@@ -1,0 +1,13 @@
+ul.ant-menu.modal-menu {
+    width: 100%;
+}
+li.ant-menu-item.modal-menu {
+    width: 40%;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+div.modal-divider>span{
+    font-size: 22px;
+    font-weight: 550;
+}

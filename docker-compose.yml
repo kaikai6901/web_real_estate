@@ -1,0 +1,18 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ./BE
+    ports:
+      - "5555:5555"
+    volumes:
+      - ./BE:/app
+    network_mode: "host"
+
+  app:
+    build:
+      context: ./real-estate
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./real-estate:/app
