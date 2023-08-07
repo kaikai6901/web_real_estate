@@ -14,7 +14,7 @@ const db = require('./src/config/db');
 db.connect();
 const app = express();
 const PORT = 5555;
-var whitelist = ['http://localhost:3000', 'http://app:3000', 'http://127.0.0.1:3000']
+var whitelist = ['http://localhost:3000', 'http://app:3000', 'http://127.0.0.1:3000', 'http://3.1.49.34:3000']
 
 var corsOptions = {
   origin: function (origin, callback) {

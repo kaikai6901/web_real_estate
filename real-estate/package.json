@@ -2,7 +2,7 @@
   "name": "real-estate",
   "version": "0.1.0",
   "private": true,
-  "proxy":"http://localhost:3000",
+  "proxy":"http://3.1.49.34:3000",
   "dependencies": {
     "@goongmaps/goong-map-react": "^1.1.2",
     "@testing-library/jest-dom": "^5.17.0",
