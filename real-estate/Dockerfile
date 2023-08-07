@@ -4,14 +4,15 @@ FROM node:18
 WORKDIR /app
 
 # Install dependencies
-COPY package*.json ./
-RUN npm install
+# COPY package*.json ./
+# RUN npm install
 
 # Copy ReactJS app files
 COPY . .
 
 # Build React app
-RUN npm run build
+# RUN npm run build
+RUN npm install -g serve
 
 # Expose React app port
 EXPOSE 3000
