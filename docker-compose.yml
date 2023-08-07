@@ -7,6 +7,8 @@ services:
       - "5555:5555"
     volumes:
       - ./BE:/app
+    networks:
+      - mynetwork
     # network_mode: "host"
 
   app:
@@ -16,3 +18,7 @@ services:
       - "3000:3000"
     volumes:
       - ./real-estate:/app
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
