@@ -7,7 +7,7 @@ services:
       - "5555:5555"
     volumes:
       - ./BE:/app
-    network_mode: "host"
+    # network_mode: "host"
 
   app:
     build:
