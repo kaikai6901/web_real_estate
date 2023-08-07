@@ -29,15 +29,15 @@ var corsOptions = {
 app.use(cors(corsOptions));
 // app.use(cors());
 
-// const addCustomHeader = (req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow the specific HTTP methods needed
-//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow the specific headers needed
-//   next();
-// };
+const addCustomHeader = (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Allow requests from any origin
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow the specific HTTP methods needed
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow the specific headers needed
+  next();
+};
 
 // Apply the middleware to all requests
-// app.use(addCustomHeader);
+app.use(addCustomHeader);
 // Middleware
 app.use(bodyParser.json());
 
