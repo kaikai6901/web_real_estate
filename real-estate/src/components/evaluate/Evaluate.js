@@ -10,7 +10,7 @@ let square = ''
 let n_bedrooms = ''
 
 function Evaluate (props) {
-    const [projects, setProjects] = useState([])
+    const [projects, setProjects] = useState(null)
     const [openModal, setOpenModal] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null)
     const [result, setResult] = useState('')
@@ -20,7 +20,7 @@ function Evaluate (props) {
     })
 
     const evaluate = async () => {
-        if (selectedProject === '' || isNaN(square) || isNaN(n_bedrooms)) {
+        if (!selectedProject || !square || !n_bedrooms ||isNaN(square) || isNaN(n_bedrooms)) {
             console.log('Please select a project and enter a valid number.');
             return;
         }
@@ -120,7 +120,7 @@ function Evaluate (props) {
                             style={{ width: 400, fontSize: '16px'}}
                             placeholder="Chọn dự án"
                             onChange={onChange}
-                            options={projects ? projects.map((item)=> ({value: item.project_id, label: item.name, loc: item.loc })) : []}
+                            options={projects && Array.isArray(projects) ? projects.map((item)=> ({value: item.project_id, label: item.name, loc: item.loc })) : []}
                             size='large'
                             popupMatchSelectWidth={300}
                             // defaultValue={getKeyByValue(objectiveList, order)}
